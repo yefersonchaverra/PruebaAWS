@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Release to S3
+    - name: Upload VentasTxt
       run: bash scripts/pipeline/release.sh "s3-yeferson-prueba-tecnica" "Ventas.csv" "AKIAZLM4KFJ7AUNVWC4U" "GoBPrVmtPN8K1H+q7dugwJbYK3K6UB1rXxT/iKNG" "Ventas.csv"
+    - name: Upload VentasXML
       run: bash scripts/pipeline/release.sh "s3-yeferson-prueba-tecnica" "PruebaTecnica.xml" "AKIAZLM4KFJ7AUNVWC4U" "GoBPrVmtPN8K1H+q7dugwJbYK3K6UB1rXxT/iKNG" "PruebaTecnica.xml"
